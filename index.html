@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museums in Manila</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/sources/images/icon.png" type="image/x-icon">
+<body>
+
+    <section id="hero-page">
+        <div id="pillar">
+            <img src="/sources/images/pillar.png" alt="">
+        </div>
+        <div id="hero-text">
+            <h1>Museums</h1>
+            <h2>IN MANILA</h2>
+            <button id="get-started" class="btn btn-primary btn-lg mt-3"
+                    onclick="scrollToSection('anthropology')">
+                Know More
+            </button>
+        </div>
+        <div class="circle" id="hero-circle"></div>
+        <div class="container-hover" id="1"></div>
+        <div id="img-container">
+            <img src="/sources/images/wallpainting.jpg" alt="">
+            <img src="/sources/images/natural_history.jpg" alt="">
+            <img src="/sources/images/fine_arts.jpg" alt="">
+            <img src="/sources/images/tamaraw.jpg" alt="">
+            <img src="/sources/images/croc.jpg" alt="">
+
+        </div>
+    </section>
+
+    <section id="about">
+        <div id="about-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+
+    <section id="slideshow">
+        <div id="antro">
+            <img src="/sources/images/anthropology.jpg" alt="">
+        </div>
+        <div id="fine">
+            <img src="/sources/images/fine_arts.jpg" alt="">
+        </div>
+        <div id="natural">
+            <img src="/sources/images/natural_history.jpg" alt="">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+    </section>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script src="sikret.js"></script>
+</body>
+</html>

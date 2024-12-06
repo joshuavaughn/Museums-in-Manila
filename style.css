@@ -1,0 +1,691 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid lightgray; */
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #000000;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+nav{
+    background-color: #1F1F1F;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Default logo visibility */
+#red {
+    display: none;
+}
+
+#white {
+    display: block;
+}
+
+/* Hover effect on the link containing the logo */
+.logo:hover #red {
+    display: block;
+}
+
+.logo:hover #white {
+    display: none;
+}
+
+nav a:hover{
+    background-color: #131313;
+    color: #ff0000;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+nav li:first-child img {
+    height: 1.5em;
+}
+
+
+
+
+/***************************************************************
+*************            Hero Page           *********************
+***************************************************************/
+#hero-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-areas: 'left center right';
+    overflow: hidden;
+    position: relative; 
+}
+
+#img-container {
+    position: absolute;
+    display: flex;
+    gap: 5em;
+    z-index: -2;
+    left: -17%;
+    transform: translateX(-17%);
+    bottom: 24%;
+    transform: translateY(-23%);
+    margin: 3em 3em;
+    transition: 1s;
+}
+
+.container-hover {
+    height: 15em;
+    width: 100%;
+    opacity: 40%;
+    position:fixed;
+    bottom: 32%;
+    /* background-color: #1f1f1f; */
+    transform: translateY(-32%);
+}
+
+#img-container img {
+    width: 20em;
+    height: 15em;
+    padding: 2em 2em;
+    border: 1px solid gray;
+    filter: saturate(10%);
+}
+
+.container-hover:hover + #img-container {
+    left: 0%;
+    transform: translateX(0%);
+    bottom: 24%;
+    transform: translateY(-23%);
+}
+
+#pillar {
+    width: 100%;
+    
+}
+
+#pillar img {
+    position: fixed;
+    width: 60vh;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    /* filter: saturate(10%); */
+}
+
+#hero-text {
+    grid-area: center;
+    justify-items: center;
+    margin-top: auto;
+    margin-bottom: 3em;
+    z-index: 1;
+    color: white;
+}
+
+#hero-text h1 {
+    font-size: 10rem;
+    letter-spacing: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    margin-bottom: -4rem;
+}
+
+#hero-text h2 {
+    font-size: 3rem;
+    font-weight: lighter;
+    letter-spacing: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -5rem;
+}
+
+#hero-text p {
+    
+}
+
+#get-started {
+    background-color: red;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.1rem;
+}
+
+#get-started:hover {
+    background-color: rgb(255, 255, 255);
+    color: red;
+}
+
+.circle {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    /* background-color: rgb(238, 238, 238); */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#hero-circle {
+    top: 35em;
+    background-color: rgb(21, 21, 21);
+}
+
+#about {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-text{
+    padding: 5em;
+    text-align: center;
+}
+
+#about-text p{
+
+}
+
+.h2 {
+    color: #f0818100;
+}
+
+/***************************************************************
+*************          Anthropology           *********************
+***************************************************************/
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .heross {
+    background: url('/sources/images/antro.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  .heross::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .heross-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .tours {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    color: #bdbdbd;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .btnss {
+    text-decoration: none;
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btnss:hover {
+    background-color: #7c7c7c;
+  }
+  
+  .sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .section {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .section img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #bdbdbd;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .btnss-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btnss-container .btn {
+    text-decoration: none;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btnss-container .btn:hover {
+    background-color: #7c7c7c;
+  }
+
+  .back-btnss {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-btnss:hover {
+    background-color: #7c7c7c;
+  }
+
+/***************************************************************
+*************          Fine Arts           *********************
+***************************************************************/
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .heros {
+    background: url('/sources/images/finearts.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  .heros::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .heros-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .tours {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    color: #bdbdbd;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    text-decoration: none;
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #7c7c7c;
+  }
+  
+  .sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .section {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .section img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #bdbdbd;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .btn-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-container .btn {
+    text-decoration: none;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-container .btn:hover {
+    background-color: #7c7c7c;
+  }
+
+  .back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #7c7c7c;
+  }
+
+/***************************************************************
+*************          Natural History           *********************
+***************************************************************/
+  
+  .containersss {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .herosss {
+    background: url('/sources/images/nathisto.JPG') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  .herosss::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .herosss-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    text-decoration: none;
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #7c7c7c;
+  }
+  
+  .sectionssss {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .sectionsss {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .sectionsss img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #bdbdbd;
+  }
+  
+  .hiddensss {
+    display: none;
+  }
+  
+  .btn-containersss {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-containersss .btnsss {
+    text-decoration: none;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-containersss .btnsss:hover {
+    background-color: #7c7c7c;
+  }
+
+  .back-btnsss {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: #7c7c7c;
+  }
+
+/*******************************************************/
+
+#slideshow {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr;
+    grid-template-areas: 'left center right';
+    align-items: center;
+    overflow: hidden;  
+    gap: 5em;
+    justify-items: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: red;
+    left: 0; 
+}
+
+.next {
+    right: 0;
+    left: auto;
+    border-radius: 3px 0 0 3px;
+}
+
+#circle1 {
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 70%;
+}
+
+#circle2 {
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 70%;
+}
+
+#antro {
+    grid-area: left;
+    margin-left: -70em;
+}
+
+#fine {
+    grid-area: center;
+} 
+
+#natural {
+    grid-area: right;
+    margin-right: -70em;
+}
+
