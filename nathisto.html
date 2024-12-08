@@ -12,65 +12,61 @@
         <ul>
             <li>
                 <a href="/index.html" class="logo">
-                    <img src="/sources/images/logo.png" alt="Logo White" id="white">
-                    <img src="/sources/images/logo_red.png" alt="Logo Red" id="red">
+                  <img src="/sources/images/logo.png" alt="Logo White" id="white-icon">
+                  <img src="/sources/images/logo_red.png" alt="Logo Red" id="red-icon">
                 </a>
             </li>
-            <li><a href="/anthro.html">anthro</a></li>
-            <li><a href="/finearts.html">finearts</a></li>
-            <li><a href="/nathisto.html">nathisto</a></li>
+            <li><a href="/anthro.html">Anthropology</a></li>
+            <li><a href="/finearts.html">Fine Arts</a></li>
+            <li><a href="/nathisto.html">Natural History</a></li>
         </ul>
-    </nav>
-    <a href="/index.html" class="back-btn">←</a>
-  
+    </nav>  
+    
     <div class="container">
     <header class="hero">
       <div class="hero-content">
         <p class="tours">Open Hours -- 9am to 6pm</p>
         <h1>Welcome to the National Museum of Natural History</h1>
-        <a href="#" class="btn">Location</a>
+        <a href="#" class="button" onclick="openMap()">Location</a>
       </div>
     </header>
 
+    <div id="mapModal" class="modals">
+      <div class="modals-content">
+        <span class="close" onclick="closeMap()">&times;</span>
+        <img src="/sources/images/maps.jpg" alt="Museum Location" class="map-image">
+      </div>
+    </div>
+
     <section class="sections">
-      <div class="section">
-        <img src="/sources/images/nhyundai.jpg" alt="Hyundai Hall" />
+      <div id="section" class="card">
+        <img src="/sources/images/nhyundai.jpg" alt="Hyundai" />
         <h2>Hyundai Hall</h2>
-        <p>.<br>.</p>
+        <p>Hyundai Philippines Entrance Hall is the main entrance to the National Museum of Natural History. 
+          Its grandeur and timeless design was restored faithfully to the aim described by the original 1939 architectural drawings. 
+          It now houses the Marinduque Sperm whale skeleton where visitors can appreciate the specimen while waiting to be admitted inside.</p>
       </div>
 
-      <div class="section">
-        <img src="/sources/images/ncarabao.jpg" alt="carabao" />
-        <h2>Carabao</h2>
-        <p>.<br>.</p>
+      <div id="section" class="card">
+        <img src="/sources/images/nlolong.jpg" alt="Lolong" />
+        <h2>Philippine Biodiversity</h2>
+        <p>The NMNH is designed thematically to tackle the dynamic systems of our Natural Heritage from the highest 
+          mountains to the deepest seas. You will begin that journey in this gallery where we introduce the various dynamics 
+          that shaped, and is still shaping, our biological diversity.</p>
       </div>
 
-      <div class="section">
-        <img src="/sources/images/nmineral.jpg" alt="mining" />
-        <h2>Mining</h2>
-        <p>.<br>.</p>
+      <div id="section" class="card">
+        <img src="/sources/images/nmineral.jpg" alt="Minerals" />
+        <h2>Minerals and Energy Resources</h2>
+        <p>This gallery, divided into two sections, features the different types of natural resources that we 
+          utilize in the Philippines. It builds awareness on the origin of these resources, how they are obtained 
+          and how they contribute to our everyday well-being.</p>
       </div>
     </section>
 
-    <div class="section hidden">
-        <img src="/sources/images/ngeology.jpg" alt="Geology" />
-        <h2>The Geology of the Philippines</h2>
-        <p>.<br>.</p>
-      </div>
-
-      <div class="section hidden">
-        <img src="/sources/images/nlolong.jpg" alt="lolong" />
-        <h2>Lolong</h2>
-        <p>.<br>.</p>
-      </div>
-    </section>
-
-    <div class="btn-container">
-        <button id="see-more" class="btn">See More</button>
-      </div>
     </div>
 </div>
 
-<script src="sikret.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

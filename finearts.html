@@ -12,65 +12,63 @@
         <ul>
             <li>
                 <a href="/index.html" class="logo">
-                    <img src="/sources/images/logo.png" alt="Logo White" id="white">
-                    <img src="/sources/images/logo_red.png" alt="Logo Red" id="red">
+                  <img src="/sources/images/logo.png" alt="Logo White" id="white-icon">
+                  <img src="/sources/images/logo_red.png" alt="Logo Red" id="red-icon">
                 </a>
             </li>
-            <li><a href="/anthro.html">anthro</a></li>
-            <li><a href="/finearts.html">finearts</a></li>
-            <li><a href="/nathisto.html">nathisto</a></li>
+            <li><a href="/anthro.html">Anthropology</a></li>
+            <li><a href="/finearts.html">Fine Arts</a></li>
+            <li><a href="/nathisto.html">Natural History</a></li>
         </ul>
     </nav>
-    <a href="/index.html" class="back-btn">←</a>
   
     <div class="cards">
     <header class="heroe">
       <div class="heroe-content">
         <p class="time">Open Hours -- 9am to 6pm</p>
         <h1>Welcome to the National Museum of Fine Arts</h1>
-        <a href="#" class="buttons">Location</a>
+        <a href="#" class="button" onclick="openMap()">Location</a>
       </div>
     </header>
 
+    <div id="mapModal" class="modals">
+      <div class="modals-content">
+        <span class="close" onclick="closeMap()">&times;</span>
+        <img src="/sources/images/maps.jpg" alt="Museum Location" class="map-image">
+      </div>
+    </div>
+
     <section class="secss">
-      <div class="sect">
+      <div id="sect" class="card">
         <img src="/sources/images/fspolarium.jpg" alt="Spolarium" />
         <h2>Spolarium Hall</h2>
-        <p>.<br>.</p>
+        <p>This hall houses one of the country’s most well-known paintings, the Spoliarium by Juan Luna y Novicio (1857-1899). 
+          Across it is El Asesinato del Gobernador Bustamante (The Assassination of Governor Bustamante), 
+          the most extensive work by another Filipino master painter, Felix Resurrección Hildago (1855-1913), 
+          Luna’s contemporary and friend.</p>
       </div>
 
-      <div class="sect">
-        <img src="/sources/images/fvicente.jpg" alt="gallery13" />
+      <div id="sect" class="card">
+        <img src="/sources/images/fvicente.jpg" alt="Vicente" />
         <h2>Vicente and Carmen Fabella Hall</h2>
-        <p>.<br>.</p>
+        <p>This gallery features the fourth painting in the series that comprise the Filipino Struggles Through History. 
+          It includes works of National Artist Napoleon Abueva (1930-2018), including two large wood reliefs that he made with the 
+          assistance of Renato Rocha (1937-2001) and Jose Mendoza (b. 1941) portraying Rajah Sulayman, His Court, and the Palisades, 
+          Miguel Lopez de Legaspi, and the Founding of Manila.</p>
       </div>
 
-      <div class="sect">
+      <div id="sect" class="card">
         <img src="/sources/images/fsenate.jpg" alt="Senate" />
         <h2>Old Senate Session Hall</h2>
-        <p>.<br>.</p>
+        <p>This hall features the Filipino Struggles Through History, also known as History of Manila, 
+          he monumental series of paintings by National Artist Carlos “Botong” V. Francisco (1912-1969) commissioned in 1968 
+          for the Manila City Hall by Mayor Antonio J. Villegas.</p>
       </div>
     </section>
-
-    <div class="sect hidden">
-        <img src="/sources/images/fsouth.jpg" alt="South" />
-        <h2>3rd Floor South Wing Hallway Gallery</h2>
-        <p>.<br>.</p>
-      </div>
-
-      <div class="sect hidden">
-        <img src="/sources/images/fportrait.jpg" alt="Portrait" />
-        <h2>20th Century Philippine Portrait Hall</h2>
-        <p>.<br>.</p>
-      </div>
-    </section>
-
-    <div class="button-seemore">
-        <button id="see-more" class="button">See More</button>
-      </div>
+    
     </div>
 </div>
 
-<script src="sikret.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

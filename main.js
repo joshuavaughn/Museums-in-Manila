@@ -23,13 +23,16 @@
         this.style.display = "none";
       });*/
 
-function showHidden (){
-    const slideshow = document.getElementById('slideshow');
-    const nav = document.getElementsByTagName('nav'); // Correctly pass 'nav' as a string
+function showHidden() {
+    // Get the first element with the class 'container'
+    const slideshow = document.getElementsByClassName('container')[0];
+    const nav = document.getElementsByTagName('nav');
     const cards = document.getElementsByClassName('card');
 
-    // Show the slideshow
-    slideshow.style.display = "block";
+    // Check if the elements exist before modifying them
+    if (slideshow) {
+        slideshow.style.display = "block"; // Show the slideshow
+    }
 
     // Hide all nav elements
     for (let i = 0; i < nav.length; i++) {
@@ -43,9 +46,8 @@ function showHidden (){
 }
 
 function closeOpen (id){
-    const modal = document.getElementById(id);
+    const modal = document.getElementsByClassName(id)[0];
 
-    const slideshow = document.getElementById('slideshow');
     const nav = document.getElementsByTagName('nav'); // Correctly pass 'nav' as a string
     const cards = document.getElementsByClassName('card');
 
@@ -73,22 +75,44 @@ function closeModal (id) {
 
     modal.style.display = "none";
 }
+
+let currentslide = 3; // Declare outside to persist between function calls
+const totalSlides = 5; // Total number of slides
+
 function plusSlides(x) {
-    const img_container = document.getElementsByClassName('image-container')[0]; // Access the first element
+    const images = document.querySelectorAll('.image-container img');
 
-    // Get the current left position or default to 0 if not set
-    let currentLeft = parseInt(window.getComputedStyle(img_container).left) || 0;
-
-    // Update the left position based on x
-    if (x === 1) {
-        img_container.style.left = (currentLeft - 85) + '%'; // Move left
-        console.log (img_container);
-    } else if (x === -1) {
-        img_container.style.left = (currentLeft + 85) + '%'; // Move right
-        console.log (img_container);
-
+    // Update currentslide while clamping its value between 1 and totalSlides
+    currentslide += x;
+    if (currentslide < 1) {
+        currentslide = 1; // Stay at the first slide
+    } else if (currentslide > totalSlides) {
+        currentslide = totalSlides; // Stay at the last slide
     }
+
+    console.log(`Current slide: ${currentslide}`);
+
+    // Loop through all images and dynamically calculate their left positions
+    images.forEach((img, index) => {
+        const slideIndex = index + 1; // Images are 1-indexed
+        let position;
+
+        // Calculate position based on the current slide
+        if (slideIndex === currentslide) {
+            position = "0%"; // Current slide is centered
+        } else if (slideIndex < currentslide) {
+            // Slides to the left of the current slide
+            position = `${160 - (currentslide - slideIndex) * 80}%`;
+        } else {
+            // Slides to the right of the current slide
+            position = `${-85 - (slideIndex - currentslide) * 80}%`;
+        }
+
+        // Apply the calculated position to the current image
+        img.style.left = position;
+    });
 }
+
 
 //----------- MAP --------------//
 
