@@ -319,48 +319,117 @@ a {
   display: none;
 }
 
+/* For tablets and smaller desktops */
 @media (max-width: 799px) {
   #hero-text h1 {
-    font-size: 8rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    font-size: 6rem;
     margin-bottom: -3rem;
   }
 
+  #hero-text h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+  }
+
   #img-container {
-    left: -49%;
+    left: 5%;
+    transform: translateX(0%);
+    top: 30%;
   }
 
   #img-container img {
-    width: 10em;
-    height: 7em;
-    padding: 2rem 2rem;
+    width: 8em;
+    height: 5em;
+    padding: 1rem;
   }
-  
+
   .container-hover {
-    height: 12em;
-    transform: translateY(-35%);
+    height: 10em;
+    top: 40%;
   }
-  
-  .container-hover:hover + #img-container {
-    left: 10%;
-    transform: translateX(0%);
-    top: 24%;
-    transform: translateY(-23%);
+
+  .modal {
+    width: 90%;
+    height: auto;
+    padding: 1em;
+  }
+
+  .modal-header div img {
+    width: 1.5em;
+  }
+
+  .modal-title h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* For smaller phones */
+@media (max-width: 566px) {
+  #hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: -1.5rem;
+  }
+
+  #hero-text h2 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+  }
+
+  #img-container img {
+    display: none;
+  }
+
+  #pillar img {
+    top: 10%;
+  }
+  .container-hover {
+    height: 8em;
+    top: 45%;
+  }
+
+  .modal {
+    padding: 1em;
+  }
+
+  .modal-title h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* For ultra-small devices (less than 375px) */
+@media (max-width: 375px) {
+  #hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: -1rem;
+  }
+
+  #hero-text h2 {
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+  }
+
+  #img-container img {
+    display: none;
+  }
+  #pillar img {
+    top: 100%;
   }
 
   .modal {
     width: 100%;
-    padding: 10em;
+    padding: 0.5em;
   }
+
+  .modal-title h1 {
+    font-size: 1rem;
+  }
+
+  #pillar img {
+    top: 10%;
+  }
+
 }
 
-/* For screens smaller than 480px (small phones) */
-@media (max-width: 566px) {
-  #hero-text h1 {
-    font-size: 5rem;
-    margin-bottom: -2rem;
-  }
-}
 
 /*********************************************************************
 **********************************************************************
@@ -758,6 +827,75 @@ p {
 #natural {
     grid-area: right;
     margin-right: -70em;
+}
+
+
+
+@media (max-width: 500px) {
+  .secs, .secss, .sections {
+    flex-wrap: wrap;
+    margin-top: 2em;
+    gap: 2em;
+  }
+}
+
+
+/* Mobile Phones (<768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  .heroes, .heroe, .hero {
+    height: 40vh;
+  }
+
+  button, .button, .btn {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+
+  .secs, .secss, .sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .heroes, .heroe, .hero {
+    height: 50vh;
+  }
+
+  .secs, .secss, .sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (>1024px) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .heroes, .heroe, .hero {
+    height: 60vh;
+  }
+
+  .secs, .secss, .sections {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 
